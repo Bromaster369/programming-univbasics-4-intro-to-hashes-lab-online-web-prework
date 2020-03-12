@@ -26,19 +26,13 @@ def my_hash_creator(key, value)
 end
 
 def read_from_hash(hash, key)
-read_from_hash = {
-  name: 'Tzvi',
-  age: 31
-}
-read_from_hash[:name]
+hash[key]
   # return the correct value using the hash and key parameters
 end
 
 def update_counting_hash(hash, key)
-update_counting_hash = {
-  :count => 5
-}
-update_counting_hash = {:count =>6}
+hash[key] ? hash[key] +=1 : hash[key] = 1
+hash
  
   # given a hash an a key as parameters, return an updated hash
   # if the provided key is not present in the hash, add it and assign it to the value of 1
